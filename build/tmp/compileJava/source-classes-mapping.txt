@@ -1,0 +1,12 @@
+com/thymeleaf/model/ProductModel.java
+ com.thymeleaf.model.ProductModel
+com/thymeleaf/config/AppConfiguration.java
+ com.thymeleaf.config.AppConfiguration
+com/thymeleaf/service/impl/ProductService.java
+ com.thymeleaf.service.impl.ProductService
+com/thymeleaf/service/IProductService.java
+ com.thymeleaf.service.IProductService
+com/thymeleaf/controller/ProductController.java
+ com.thymeleaf.controller.ProductController
+com/thymeleaf/config/AppInitializer.java
+ com.thymeleaf.config.AppInitializer
