@@ -55,4 +55,23 @@ public class ProductController {
         redirect.addFlashAttribute("success", "Modified customer successfully!");
         return "redirect:/";
     }
+
+    @GetMapping("/product/{id}/delete")
+    public String delete(@PathVariable long id, Model model) {
+        model.addAttribute("product", productService.findById(id));
+        return "/delete";
+    }
+
+    @PostMapping("/product/delete")
+    public String delete(ProductModel product, RedirectAttributes redirect) {
+        productService.remove(product.getId());
+        redirect.addFlashAttribute("success", "Removed customer successfully!");
+        return "redirect:/";
+    }
+
+    @GetMapping("/product/{id}/view")
+    public String view(@PathVariable long id, Model model) {
+        model.addAttribute("product", productService.findById(id));
+        return "/view";
+    }
 }

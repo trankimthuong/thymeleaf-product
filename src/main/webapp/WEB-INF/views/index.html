@@ -28,7 +28,7 @@
         <td th:text="${row.brand}"></td>
         <td><a th:href="@{/product/{id}/edit(id=${row.id})}">edit</a></td>
         <td><a th:href="@{/product/{id}/delete(id=${row.name})}">delete</a></td>
-        <td><a th:href="@{/product/{id}/view(id=${row.brand})}">view</a></td>
+        <td><a th:href="@{/product/{id}/view(id=${row.id})}">view</a></td>
     </tr>
     </tbody>
 </table>

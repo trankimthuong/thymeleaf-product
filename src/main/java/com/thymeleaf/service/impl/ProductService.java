@@ -31,17 +31,19 @@ public class ProductService implements IProductService {
 
     @Override
     public ProductModel findById(Long id) {
-        return products.get(Math.toIntExact(id));
+        return products.get(Math.toIntExact(id) - 1);
     }
 
     @Override
     public boolean update(Long id, ProductModel productModel) {
-
+        ProductModel oldProduct = findById(id);
+        oldProduct.setName(productModel.getName());
+        oldProduct.setBrand(productModel.getBrand());
         return false;
     }
 
     @Override
     public ProductModel remove(Long id) {
-        return null;
+        return products.remove(Math.toIntExact(id) - 1);
     }
 }
